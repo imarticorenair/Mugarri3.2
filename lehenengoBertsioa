@@ -1,0 +1,25 @@
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Test Events: Files");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(600, 400));
+        frame.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+        frame.add(panel, BorderLayout.NORTH);
+
+        FlowLayout F = new FlowLayout();
+        panel.setLayout(F);
+        F.setAlignment(FlowLayout.LEFT);
+
+        String[] aukerak = {"python.txt", "c.txt", "java.txt"};
+        JComboBox<String> comboBox = new JComboBox<>(aukerak);
+        panel.add(comboBox);
+
+        frame.setVisible(true);
+    }
+}
